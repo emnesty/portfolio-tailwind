@@ -8,7 +8,7 @@ import { ThemeSwitcher } from "./ThemeSwitcher"
 export default function Header() {
   return (
     <header className="border-b dark:border-slate-800 border-slate-200 pb-6">
-      <Container mt="6">
+      <Container style={{ marginLeft: 15, marginRight: 15 }} mt="6">
         <Flex align="center" justify="between">
           <div>
             <Text weight="bold">LUCIANO SILVA</Text>
@@ -16,13 +16,13 @@ export default function Header() {
           <NavigationMenu>
             <NavigationMenuList className="flex gap-5">
               <NavigationMenuItem className="text-violet11 dark:hover:bg-slate-800 hover:bg-slate-100 focus:shadow-slate-800 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
-                <Link href="/">Sobre</Link>
+                <Link href="/">About me</Link>
               </NavigationMenuItem>
               <NavigationMenuItem className="text-violet11 dark:hover:bg-slate-800 hover:bg-slate-100 focus:shadow-slate-800 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
                 <Link href="/">Cases</Link>
               </NavigationMenuItem>
               <NavigationMenuItem className="text-violet11 dark:hover:bg-slate-800 hover:bg-slate-100 focus:shadow-slate-800 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
-                <Link href="/">Contato</Link>
+                <Link href="/">Contact</Link>
               </NavigationMenuItem>
               <NavigationMenuItem className="text-violet11 dark:hover:bg-slate-800 hover:bg-slate-100 focus:shadow-slate-800 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
                 <ThemeSwitcher />

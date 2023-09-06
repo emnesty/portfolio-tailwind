@@ -1,51 +1,45 @@
 "use client"
-import { Button } from "@radix-ui/themes"
+import { Avatar, Badge, Box, Button, Card, IconButton, Inset, Link, Section } from "@radix-ui/themes"
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
-import Image from "next/image"
 import { Container, Flex, Heading, Text } from "@radix-ui/themes"
 
 function HeroSection() {
   return (
-    <main>
-      <Container size="1">
-        <Flex direction="column">
-          <Heading>Coding Issue Tracker</Heading>
-          <Text color="gray">Here you can find the issues relevantes your certain projects.</Text>
+    <Section>
+      <Container style={{ marginLeft: 15, marginRight: 15 }}>
+        <Flex justify="between">
+          <Flex direction="column">
+            <Heading as="h3" size="4" color="indigo">
+              hi, I'm Luciano 👋
+            </Heading>
+            <Text size="9" weight="bold" mt="3">
+              ux/ui designer having some fun with development and tech
+            </Text>
+            <Text mt="3" color="gray">
+              Here you can find some of my projects and cases, feel free to contact me
+            </Text>
+            <Flex gap="5" mt="4">
+              <Link href="https://www.linkedin.com/in/lucianoclecio/" target="_blank">
+                <Flex gap="2" align="center">
+                  <Button size="3" variant="soft" color="indigo">
+                    <LinkedInLogoIcon />
+                    LinkedIn
+                  </Button>
+                </Flex>
+              </Link>
+              <Link href="https://github.com/emnesty" target="_blank">
+                <Flex gap="2" align="center">
+                  <Button size="3" variant="soft" color="indigo">
+                    <GitHubLogoIcon />
+                    GitHub
+                  </Button>
+                </Flex>
+              </Link>
+            </Flex>
+          </Flex>
         </Flex>
       </Container>
-    </main>
-
-    // <section className="container mx-auto mt-12">
-    //   <div className="min-h-screen hero bg-base-200">
-    //     <div className="flex items-center justify-between">
-    //       <div className="w-full max-w-[600px]">
-    //         <h3 className="mb-4">Hello, I'm Luciano Silva</h3>
-    //         <h1 className="text-6xl font-bold">UX/UI Designer, Front-end developer.</h1>
-    //         <p className="mt-4">
-    //           With years of experience in large tech companies, I am currently working as UX/UI Designer and I
-    //           am always looking for new knowledge and experiences. Lets talk.
-    //         </p>
-    //         <ul className="flex gap-3 mt-10">
-    //           <li>
-    //             <a href="#">
-    //               <Button variant="outline" color="cyan">
-    //                 <GitHubLogoIcon width="16" height="16" /> Github
-    //               </Button>
-    //             </a>
-    //           </li>
-    //           <li>
-    //             <a href="#">
-    //               <Button variant="outline" color="cyan">
-    //                 <LinkedInLogoIcon width="16" height="16" /> Github
-    //               </Button>
-    //             </a>
-    //           </li>
-    //         </ul>
-    //       </div>
-    //       <Image className="rounded-lg" src="/IMG_2180-EDIT.jpg" alt="My Selfie" width={460} height={460} />
-    //     </div>
-    //   </div>
-    // </section>
+    </Section>
   )
 }
 
