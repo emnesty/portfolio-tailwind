@@ -1,8 +1,7 @@
 "use client"
 import { Link } from "@radix-ui/react-navigation-menu"
 import { Container, Flex, Text } from "@radix-ui/themes"
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "./ui/navigation-menu"
-import { SunIcon } from "@radix-ui/react-icons"
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@radix-ui/react-navigation-menu"
 import { ThemeSwitcher } from "./ThemeSwitcher"
 
 export default function Header() {
