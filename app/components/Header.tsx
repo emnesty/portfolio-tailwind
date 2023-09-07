@@ -5,11 +5,28 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@radix-u
 import { ThemeSwitcher } from "./ThemeSwitcher"
 import TranslationSwitcher from "./TranslationSwitcher"
 import TranslationText from "./TranslationText"
-import { useContext } from "react"
+import { useContext, createContext } from "react"
 import { LanguageContext } from "./LanguageContext"
 
+interface LanguageContextProps {
+  selectedText: {
+    HeaderMenu1: string
+    HeaderMenu2: string
+    HeaderMenu3: string
+  }
+}
+
+// Provide a default value when creating the context
+export const MyLanguageContext = createContext<LanguageContextProps>({
+  selectedText: {
+    HeaderMenu1: "About",
+    HeaderMenu2: "Cases",
+    HeaderMenu3: "Contact",
+  },
+})
+
 export default function Header() {
-  const { selectedText } = useContext(LanguageContext)
+  const { selectedText } = useContext(MyLanguageContext)
   return (
     <header className="border-b dark:border-slate-800 border-slate-200 pb-6">
       <Container style={{ marginLeft: 15, marginRight: 15 }} mt="6">
