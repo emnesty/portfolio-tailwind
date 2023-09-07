@@ -4,8 +4,10 @@ import Image from "next/image"
 import React, { useContext } from "react"
 import { LanguageContext } from "./LanguageContext"
 
+const defaultContext = { selectedText: { Titulo: "Default Title", SubTitulo: "Default Subtitle" } }
+
 function AboutSection() {
-  const { selectedText } = useContext(LanguageContext)
+  const { selectedText } = useContext(LanguageContext) || defaultContext
 
   return (
     <Section>
