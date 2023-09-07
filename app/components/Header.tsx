@@ -7,43 +7,6 @@ import TranslationSwitcher from "./TranslationSwitcher"
 import { useContext, createContext } from "react"
 import { LanguageContext } from "./LanguageContext"
 
-// interface LanguageContextProps {
-//   Header_pt: {
-//     HeaderMenu1: string
-//     HeaderMenu2: string
-//     HeaderMenu3: string
-//   }
-//   Header_en: {
-//     HeaderMenu1: string
-//     HeaderMenu2: string
-//     HeaderMenu3: string
-//   }
-//   Header_es: {
-//     HeaderMenu1: string
-//     HeaderMenu2: string
-//     HeaderMenu3: string
-//   }
-// }
-
-// Provide a default value when creating the context
-// export const MyLanguageContext = createContext<LanguageContextProps>({
-//   Header_pt: {
-//     HeaderMenu1: "Sobre",
-//     HeaderMenu2: "Trabalhos",
-//     HeaderMenu3: "Contato",
-//   },
-//   Header_en: {
-//     HeaderMenu1: "Acerca",
-//     HeaderMenu2: "Trabajos",
-//     HeaderMenu3: "Contacto",
-//   },
-//   Header_es: {
-//     HeaderMenu1: "About",
-//     HeaderMenu2: "Cases",
-//     HeaderMenu3: "Contact",
-//   },
-// })
-
 const defaultContext = {
   selectedText: {
     Titulo: "Default Title",

@@ -5,8 +5,18 @@ import { Container, Flex, Heading, Text } from "@radix-ui/themes"
 import { useContext } from "react"
 import { LanguageContext } from "./LanguageContext"
 
+const defaultContext = {
+  selectedText: {
+    Titulo: "Default Title",
+    SubTitulo: "Default Subtitle",
+    HeaderMenu1: "Default Subtitle",
+    HeaderMenu2: "Default Subtitle",
+    HeaderMenu3: "Default Subtitle",
+  },
+}
+
 function HeroSection() {
-  const { selectedText } = useContext(LanguageContext)
+  const { selectedText } = useContext(LanguageContext) || defaultContext
   return (
     <Section>
       <Container style={{ marginLeft: 15, marginRight: 15 }}>
