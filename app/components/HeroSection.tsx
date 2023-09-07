@@ -8,6 +8,9 @@ import { LanguageContext } from "./LanguageContext"
 const defaultContext = {
   selectedText: {
     Titulo: "Default Title",
+    Hello: "Default Title",
+    Heading: "Default Title",
+    HeadingSubTitle: "Default Title",
     SubTitulo: "Default Subtitle",
     HeaderMenu1: "Default Subtitle",
     HeaderMenu2: "Default Subtitle",
