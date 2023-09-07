@@ -18,7 +18,16 @@ interface LanguageContextProps {
 
 // Provide a default value
 const defaultContext: LanguageContextProps = {
-  selectedText: { Titulo: "", SubTitulo: "", Heading: "", HeadingSubTitle: "", Hello: "", HeaderMenu1: "," },
+  selectedText: {
+    Titulo: "",
+    SubTitulo: "",
+    Heading: "",
+    HeadingSubTitle: "",
+    Hello: "",
+    HeaderMenu1: "",
+    HeaderMenu2: "",
+    HeaderMenu3: "",
+  },
   setSelectedLanguage: () => {}, // Provide a no-op function as default
 }
 
