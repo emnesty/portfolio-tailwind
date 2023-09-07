@@ -1,19 +1,19 @@
+"use client"
 import { Container, Flex, Heading, Section, Text } from "@radix-ui/themes"
 import Image from "next/image"
-import React from "react"
+import React, { useContext } from "react"
+import { LanguageContext } from "./LanguageContext"
 
-const AboutSection = () => {
+function AboutSection() {
+  const { selectedText } = useContext(LanguageContext)
+
   return (
     <Section>
       <Container style={{ marginLeft: 15, marginRight: 15 }}>
         <Flex justify="between">
           <Flex direction="column">
-            <Heading mb="2">About me</Heading>
-            <Text style={{ maxWidth: 550 }}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-              the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-              of type and scrambled it to make a type specimen book.
-            </Text>
+            <Heading mb="2">{selectedText.Titulo}</Heading>
+            <Text style={{ maxWidth: 550 }}>{selectedText.SubTitulo}</Text>
           </Flex>
           <div className="rounded-lg overflow-hidden">
             <Image src={"/IMG_2180-EDIT.jpg"} alt="Picture of the author" width={500} height={500} />
