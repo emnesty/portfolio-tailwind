@@ -14,7 +14,7 @@ const defaultContext: LanguageContextProps = {
 
 //Working Code Below
 const TranslationSwitcher: React.FC = () => {
-  const { setSelectedLanguage } = useContext(LanguageContext)
+  const { setSelectedLanguage } = useContext(LanguageContext) || defaultContext
 
   const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedLanguage(event.target.value as Language)
