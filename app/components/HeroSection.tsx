@@ -28,7 +28,15 @@ function HeroSection() {
             <Heading as="h3" size="4" color="indigo">
               {selectedText.Hello}
             </Heading>
-            <Text size="9" weight="bold" mt="3">
+            <Text
+              size={{
+                initial: "5",
+                md: "9",
+                lg: "9",
+                xs: "8",
+              }}
+              weight="bold"
+              mt="3">
               {selectedText.Heading}
             </Text>
             <Text mt="3" color="gray">
